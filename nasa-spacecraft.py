@@ -1,11 +1,13 @@
 # -*- coding: utf8 -*-
 #!/usr/bin/python
 
+# README: https://github.com/3pr0mpt/nasa-spacecraft-trajectory/blob/master/README.md
 # Packages needed for this script:
-# apt-get install python2.7 libav-tools
-# pip-2.7 install urllib2 progress_bar
+# apt-get install python2.7 python-pip libav-tools
+# pip2 install progress_bar
 # Thanks to Adrienne Kotze for converting video (http://techedemic.com/2014/09/18/creating-a-timelapse-clip-with-avconv/)
 # Many thanks to NASA for providing such amazing tool http://space.jpl.nasa.gov/
+
 
 import time
 import sys
@@ -182,8 +184,7 @@ def mission_to(sday, smonth, syear, fovmul, rfov, bfov, porbs, showsc, showac, t
     print "\n\nAll images are now on filesystem!"
     print "\n✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰"
 
-    movie = "n"
-    #movie = raw_input('Do you want me to make a movie from those images: (y/n)')
+    movie = raw_input('Do you want me to make a movie from those images: (y/n)')
     if movie == "y":
         print "Let's make a video from the images. This process may take some time depending on your computer..."
         make_video_from_folder(folder, projectname)
